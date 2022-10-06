@@ -20,10 +20,29 @@ let hasA = function(s) {
 };
 console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth', 'height' ]
 *******************************************************************************/
-
+// 1.accept an array and callback as argument
+// 2. function call the cb for each element of the array passing into element
+// 3. return new array containing ORIGINAL array that result in false
+// when give to cb
 function reject(array, cb) {
-  // Your code here
+  let result = array.filter((el) =>{
+    if(!cb(el)){
+      return el
+    }
+  })
+  return result
+
 }
+let isEven = function(n) {
+  return n % 2 === 0;
+};
+console.log(reject([7, 8, 5, 6, 12, 11], isEven)); // [ 7, 5, 11 ]
+
+let hasA = function(s) {
+  return s.toLowerCase().includes('a');
+};
+console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth', 'height' ]
+
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {

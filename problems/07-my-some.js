@@ -22,9 +22,11 @@ let result3 = mySome(['soup', 'noodles', 'bike', 'ship'], function(ele) {
 });
 console.log(result3);   // true
 *******************************************************************************/
-
+// 1.arr and cb as arg
+// 2.func call the cb for each el of arr pass in el and its index
+// 3. func return boolean
 function mySome(array, cb) {
-    // Your code here
+
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

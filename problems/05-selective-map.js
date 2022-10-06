@@ -41,11 +41,48 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - What do you expect each callback function to be returning?
 - How many times are you calling each callback function?
 *******************************************************************************/
-
+// 1.take in array and 2 cb as argument
+// 2. return new array element replace result on cb 2 element
+// 3. but only pass cb1 , if not pass return array
 function selectiveMap(array, selector, mapper) {
+    let result = array.map((el) =>{
+        if(selector(el)){
+            return mapper(el)
+        }
+        else{
+            return el
+        }
+    })
+    return result
+
+
     // Your code here
+
+}
+function isEven(n) {
+    return n % 2 === 0;
 }
 
+function isPositive(n) {
+    return n > 0;
+}
+
+function square(n) {
+    return n * n;
+}
+
+function flipSign(n) {
+    return n * -1;
+}
+
+console.log(selectiveMap([8, 5, 10, 4], isEven, square));
+// [ 64, 5, 100, 16 ]
+
+console.log(selectiveMap([-10, 4, 7, 6, -2, -9], isEven, flipSign));
+// [ 10, -4, 7, -6, 2, -9 ]
+
+console.log(selectiveMap([-10, 4, 7, 6, -2, -9], isPositive, square));
+// [-10, 16, 49, 36, -2, -9]
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
     module.exports = selectiveMap;
