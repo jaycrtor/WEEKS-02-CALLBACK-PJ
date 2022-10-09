@@ -31,9 +31,15 @@ console.log(chainMap(4, half, square));         // 4
 // return final result of passing the value through all callbacks
 // in other words if three callbacks given then
 function chainMap(val, ...callbacks) {
-  let result = 
+  let result = val ;
+  callbacks.forEach((el) =>{
+    console.log(val(el))
 
-  return result
+
+
+
+  })
+
 
 
 
