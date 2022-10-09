@@ -16,15 +16,16 @@ let result2 = myMap(['run', 'Forrest'], function (el) {
 console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
-function myMap(array, cb) {
-    let res = [];
-    for ( let i = 0 ; i < array.length ; i++){
-        res.push(cb(array[i]))
-    }
-    return res;
 
-    // Your code here
-}
+// function myMap(array, cb) {
+//     let res = [];
+//     for ( let i = 0 ; i < array.length ; i++){
+//         res.push(cb(array[i]))
+//     }
+//     return res;
+
+//     // Your code here
+// }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {

@@ -20,9 +20,15 @@ let result3 = multiMap("hi", 5, function(s) {
 });
 console.log(result3); // hi!!!!!
 *******************************************************************************/
+// 1. return a new value that result from running the original value through the call back n times
+let result1 = multiMap(7, 2, function(n) {
+  return n * 10;
+});
 
 function multiMap(val, n, cb) {
-  // Your code here
+  let result = 0 ;
+
+
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

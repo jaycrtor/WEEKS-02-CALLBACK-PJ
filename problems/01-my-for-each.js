@@ -20,16 +20,30 @@ myForEach(['laika', 'belka'], function (el) {
 });
 console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
-
 function myForEach(array,cb){
-    for ( let i = 0 ; i < array.length;i++ ){
-        cb(array[i], i , array)
+    for ( let i = 0 ; i < array.length ; i++){
+        let el = array[i]
+         cb(el,i,array)
     }
 
-
-
-
 }
+
+
+
+
+
+
+
+
+// function myForEach(array,cb){
+//     for ( let i = 0 ; i < array.length;i++ ){
+//         cb(array[i], i , array)
+//     }
+
+
+
+
+// }
 // let test = [];
 // myForEach(['laika', 'belka'], function (el) {
 //     test.push(el.toUpperCase());

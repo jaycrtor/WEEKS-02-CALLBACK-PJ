@@ -18,9 +18,9 @@ let result2 = myFilter(['choose', 'big', 'words', 'only'], function (s) {
 });
 console.log(result2);      // ['choose', 'words', 'only']
 *******************************************************************************/
-
+// 1. function call the callback on each element of the array
 function myFilter(array, cb) {
-    // Your code here
+
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
