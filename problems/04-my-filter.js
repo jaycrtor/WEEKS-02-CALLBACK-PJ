@@ -19,10 +19,22 @@ let result2 = myFilter(['choose', 'big', 'words', 'only'], function (s) {
 console.log(result2);      // ['choose', 'words', 'only']
 *******************************************************************************/
 // 1. function call the callback on each element of the array
-function myFilter(array, cb) {
+function myFilter(array,cb){
+    let arr = [];
+    for ( let i = 0 ; i < array.length;i++){
+        let el = array[i]
+        if(cb(el)){
+            arr.push(el)
+
+        }
+    }
+    return arr
 
 }
-
+let result1 = myFilter([5, 7, 4, 3, 8], function (n) {
+    return n % 2 === 0;
+});
+console.log(result1);       // [ 4, 8 ]
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
     module.exports = myFilter;
