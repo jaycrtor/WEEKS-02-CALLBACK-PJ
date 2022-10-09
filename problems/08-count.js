@@ -29,6 +29,7 @@ function count (array,cb) {
   let count = 0
    array.filter(el =>{
     if(cb(el)){
+      
       count++
     }
   })
